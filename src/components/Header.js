@@ -25,15 +25,15 @@ const Header = () => {
         // if no context available, then get from ID token
         if (user) {
             return formatName(user);
-        } else if(id_token) {
-            return "Dr. " + id_token.given_name + " " + id_token.family_name;
+        } else if (id_token) {
+            return id_token.given_name + " " + id_token.family_name;
         } else {
             return "User not available";
         }
     }
 
     return (
-        <Navbar className="cardinalkit-bg-color" fixed="top" expand="lg">
+        <Navbar className="spezi-bg-color" fixed="top" expand="lg">
             <Navbar.Brand href="#home">
                 <img
                     src={logo}
@@ -42,10 +42,10 @@ const Header = () => {
                     height="50"
                 />
             </Navbar.Brand>
-            <Navbar.Text className="text-white mt-2">
+            <Navbar.Text className="text-white flex-grow-1">
                 <h5>Spezi SMART-on-FHIR Dashboard</h5>
             </Navbar.Text>
-            <Navbar.Text className="text-white ml-auto">
+            <Navbar.Text className="text-white">
                 <Button variant="dark"> {getProviderName()}</Button>
             </Navbar.Text>
         </Navbar>
