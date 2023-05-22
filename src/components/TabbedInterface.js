@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Tab, Nav, Container } from 'react-bootstrap';
+import StepCountChart from './activity/StepCountChart';
+import observations from '../data/observations.json';
 
 const TabbedInterface = () => {
   const [activeTab, setActiveTab] = useState('activity');
@@ -22,6 +24,7 @@ const TabbedInterface = () => {
       <Tab.Content>
         <Tab.Pane eventKey="activity">
           <h3>Activity Module</h3>
+          <StepCountChart observations={observations.entry} />
         </Tab.Pane>
         <Tab.Pane eventKey="phq9">
           <h3>PHQ-9 Module</h3>
