@@ -20,7 +20,7 @@ const Activity = ({ observations }) => {
                 <div style={{ margin: '0 10px' }}>to</div>
                 <DatePicker selected={end} onChange={(date) => setEnd(date)} />
             </div>
-            <StepCountChart observations={observations.entry} startDate={startDate} endDate={endDate} />
+            <StepCountChart observations={observations.entry} startDate={start} endDate={end} />
         </Card>
     )
 };
