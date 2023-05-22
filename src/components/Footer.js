@@ -16,7 +16,7 @@ const Footer = () => {
             <Container>
                 <div>
                     <hr />
-                    <p className="text-center">SMART-on-FHIR Dashboard for <a href="https://github.com/StanfordSpezi" target="_blank" rel="noreferrer">Stanford Spezi</a></p>
+                    <p className="text-center">An open-source project of the <a href="https://cardinalkit.stanford.edu/">Biodesign Digital Health group</a> at Stanford University.</p>
                 </div>
             </Container>
         </footer>

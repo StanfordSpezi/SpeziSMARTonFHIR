@@ -3,6 +3,9 @@ import 'react-datepicker/dist/react-datepicker.css';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const StepCountChart = ({ observations, startDate, endDate }) => {
+  startDate = new Date(startDate);
+  endDate = new Date(endDate);
+  
   const data = observations.map(entry => {
     const date = new Date(entry.resource.effectiveDateTime);
     const formattedDate = `${date.toLocaleString('default', { month: 'long' })} ${date.getDate()}`; // Display month as a word
