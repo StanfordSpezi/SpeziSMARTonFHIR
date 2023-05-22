@@ -1,0 +1,377 @@
+{
+  "resourceType": "Bundle",
+  "type": "searchset",
+  "total": 14,
+  "link": [
+    {
+      "relation": "self",
+      "url": "https://spezi.health/fhir/Observation"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "https://spezi.health/fhir/Observation/1c6507c7-8c8e-42f7-91f9-73e465aeeff1",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1c6507c7-8c8e-42f7-91f9-73e465aeeff1",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2023-05-01T10:00:00Z"
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "55423-8",
+              "display": "Number of steps in unspecified time Pedometer"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-05-01",
+        "valueQuantity": {
+          "value": 5000,
+          "unit": "steps"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://spezi.health/fhir/Observation/be96df3f-775c-4f7c-81d7-785fbc068b3b",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "be96df3f-775c-4f7c-81d7-785fbc068b3b",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2023-05-02T10:00:00Z"
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "55423-8",
+              "display": "Number of steps in unspecified time Pedometer"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-05-02",
+        "valueQuantity": {
+          "value": 7000,
+          "unit": "steps"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://spezi.health/fhir/Observation/d4d3dfc4-69b3-4e5d-80f2-2e7b6dab3cc1",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "d4d3dfc4-69b3-4e5d-80f2-2e7b6dab3cc1",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2023-05-03T10:00:00Z"
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "55423-8",
+              "display": "Number of steps in unspecified time Pedometer"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-05-03",
+        "valueQuantity": {
+          "value": 3000,
+          "unit": "steps"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://spezi.health/fhir/Observation/605c4806-25b7-4d01-9d67-174e798e26d3",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "605c4806-25b7-4d01-9d67-174e798e26d3",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2023-05-04T10:00:00Z"
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "55423-8",
+              "display": "Number of steps in unspecified time Pedometer"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-05-04",
+        "valueQuantity": {
+          "value": 9000,
+          "unit": "steps"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://spezi.health/fhir/Observation/1f1f708c-16e0-4b0e-9093-2e29b8e20b79",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "1f1f708c-16e0-4b0e-9093-2e29b8e20b79",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2023-05-05T10:00:00Z"
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "55423-8",
+              "display": "Number of steps in unspecified time Pedometer"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-05-05",
+        "valueQuantity": {
+          "value": 6000,
+          "unit": "steps"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://spezi.health/fhir/Observation/f04b13da-6c10-457b-bcd1-cab3a94cfd0f",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "f04b13da-6c10-457b-bcd1-cab3a94cfd0f",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2023-05-06T10:00:00Z"
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "55423-8",
+              "display": "Number of steps in unspecified time Pedometer"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-05-06",
+        "valueQuantity": {
+          "value": 8000,
+          "unit": "steps"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://spezi.health/fhir/Observation/2735c014-6fe3-4b32-b3b9-7b4c3dd7d8f7",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "2735c014-6fe3-4b32-b3b9-7b4c3dd7d8f7",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2023-05-07T10:00:00Z"
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "55423-8",
+              "display": "Number of steps in unspecified time Pedometer"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-05-07",
+        "valueQuantity": {
+          "value": 4000,
+          "unit": "steps"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://spezi.health/fhir/Observation/2db4fbad-9e61-4bdc-9434-487d1f27ff60",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "2db4fbad-9e61-4bdc-9434-487d1f27ff60",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2023-05-08T10:00:00Z"
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "55423-8",
+              "display": "Number of steps in unspecified time Pedometer"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-05-08",
+        "valueQuantity": {
+          "value": 5500,
+          "unit": "steps"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://spezi.health/fhir/Observation/5f457e41-bcda-4b67-8c3e-06e25d139f24",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "5f457e41-bcda-4b67-8c3e-06e25d139f24",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2023-05-09T10:00:00Z"
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "55423-8",
+              "display": "Number of steps in unspecified time Pedometer"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-05-09",
+        "valueQuantity": {
+          "value": 6800,
+          "unit": "steps"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://spezi.health/fhir/Observation/82f369de-9f08-474a-a866-ba0423db77a2",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "82f369de-9f08-474a-a866-ba0423db77a2",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2023-05-10T10:00:00Z"
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "55423-8",
+              "display": "Number of steps in unspecified time Pedometer"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-05-10",
+        "valueQuantity": {
+          "value": 7200,
+          "unit": "steps"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://spezi.health/fhir/Observation/c176bbf7-75c0-4e66-b561-f9b83fe6fdae",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "c176bbf7-75c0-4e66-b561-f9b83fe6fdae",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2023-05-11T10:00:00Z"
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "55423-8",
+              "display": "Number of steps in unspecified time Pedometer"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-05-11",
+        "valueQuantity": {
+          "value": 4000,
+          "unit": "steps"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://spezi.health/fhir/Observation/a00e72d6-eb6c-4165-a6fc-4b3b3e8b1b42",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "a00e72d6-eb6c-4165-a6fc-4b3b3e8b1b42",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2023-05-12T10:00:00Z"
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "55423-8",
+              "display": "Number of steps in unspecified time Pedometer"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-05-12",
+        "valueQuantity": {
+          "value": 5500,
+          "unit": "steps"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://spezi.health/fhir/Observation/fb3492fb-6a41-4ce2-b82e-5abef7c269db",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "fb3492fb-6a41-4ce2-b82e-5abef7c269db",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2023-05-13T10:00:00Z"
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "55423-8",
+              "display": "Number of steps in unspecified time Pedometer"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-05-13",
+        "valueQuantity": {
+          "value": 8000,
+          "unit": "steps"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://spezi.health/fhir/Observation/3b3ab89e-57d4-4c6e-a54d-bd3c39449b41",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "3b3ab89e-57d4-4c6e-a54d-bd3c39449b41",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2023-05-14T10:00:00Z"
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "55423-8",
+              "display": "Number of steps in unspecified time Pedometer"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-05-14",
+        "valueQuantity": {
+          "value": 6000,
+          "unit": "steps"
+        }
+      }
+    }
+  ]
+}
