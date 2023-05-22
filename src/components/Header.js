@@ -28,13 +28,15 @@ const Header = () => {
         } else if (id_token) {
             return id_token.given_name + " " + id_token.family_name;
         } else {
-            return "User not available";
+            return "";
         }
     }
 
+    const providerName = getProviderName();
+
     return (
-        <Navbar className="spezi-bg-color" fixed="top" expand="lg">
-            <Navbar.Brand href="#home">
+        <Navbar className="spezi-bg-color" fixed="top" expand="lg" style={{display: 'flex', justifyContent: 'space-between'}}>
+            <Navbar.Brand href="#home" style={{paddingLeft: '20px'}}>
                 <img
                     src={logo}
                     className="d-inline-block align-top"
@@ -42,11 +44,11 @@ const Header = () => {
                     height="50"
                 />
             </Navbar.Brand>
-            <Navbar.Text className="text-white flex-grow-1">
+            <Navbar.Text className="text-white" style={{margin: '0 auto'}}>
                 <h5>Spezi SMART-on-FHIR Dashboard</h5>
             </Navbar.Text>
-            <Navbar.Text className="text-white">
-                <Button variant="dark"> {getProviderName()}</Button>
+            <Navbar.Text className="text-white" style={{paddingRight: '20px'}}>
+                {providerName !== "" ? <Button variant="dark"> {providerName}</Button> : null}
             </Navbar.Text>
         </Navbar>
     )
