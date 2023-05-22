@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Tab, Nav, Container, Row, Col, Card } from 'react-bootstrap';
 import StepCountChart from './activity/StepCountChart';
+import PHQ9ResultsTable from './phq9/PHQ9ResultsTable';
 import observations from '../data/observations.json';
+import questionnaireResponses from '../data/questionnaire-responses.json';
 import PatientBanner from './PatientBanner';
 import DateRangeSelector from './ui/DateRangeSelector';
 
@@ -41,8 +43,10 @@ const TabbedInterface = () => {
                 </Card>
               </Tab.Pane>
               <Tab.Pane eventKey="phq9">
-                <h3>PHQ-9 Module</h3>
-                {/* Add your PHQ-9 tab content here */}
+              <Card className="p-2 m-2 d-flex flex-column align-items-center justify-content-center shadow">
+                  <p className="lead">PHQ-9 Responses</p>
+                  <PHQ9ResultsTable responses={questionnaireResponses.entry} />
+                </Card>
               </Tab.Pane>
             </Tab.Content>
           </Tab.Container>
