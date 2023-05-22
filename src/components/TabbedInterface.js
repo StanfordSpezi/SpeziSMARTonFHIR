@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { Tab, Nav, Container, Row, Col, Card } from 'react-bootstrap';
-import StepCountChart from './activity/StepCountChart';
+import Activity from './activity/Activity';
 import PHQ9ResultsTable from './phq9/PHQ9ResultsTable';
 import observations from '../data/observations.json';
 import questionnaireResponses from '../data/questionnaire-responses.json';
 import PatientBanner from './PatientBanner';
-import DateRangeSelector from './ui/DateRangeSelector';
 
 const TabbedInterface = () => {
   const [activeTab, setActiveTab] = useState('activity');
@@ -19,9 +18,6 @@ const TabbedInterface = () => {
       <Row>
         <Col>
           <PatientBanner />
-        </Col>
-        <Col>
-          <DateRangeSelector />
         </Col>
       </Row>
       <Row>
@@ -37,10 +33,7 @@ const TabbedInterface = () => {
             </Nav>
             <Tab.Content>
               <Tab.Pane eventKey="activity">
-                <Card className="p-2 m-2 d-flex flex-column align-items-center justify-content-center shadow">
-                  <p className="lead">Steps</p>
-                  <StepCountChart observations={observations.entry} />
-                </Card>
+                <Activity observations={observations} />
               </Tab.Pane>
               <Tab.Pane eventKey="phq9">
               <Card className="p-2 m-2 d-flex flex-column align-items-center justify-content-center shadow">
