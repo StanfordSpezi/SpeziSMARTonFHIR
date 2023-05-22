@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 const PHQ9ResultsTable = ({ responses }) => {
   const itemsPerPage = 5;
   const [currentPage, setCurrentPage] = useState(0);
+  const [sortOrder, setSortOrder] = useState('desc');
   const questionIds = ["PHQ9.1", "PHQ9.2", "PHQ9.3", "PHQ9.4", "PHQ9.5", "PHQ9.6", "PHQ9.7", "PHQ9.8", "PHQ9.9"];
   const questionNames = [
     "Interest or pleasure", 
@@ -32,7 +33,12 @@ const PHQ9ResultsTable = ({ responses }) => {
     }
   };  
   
-  const sortedResponses = responses.sort((a, b) => new Date(b.resource.authored) - new Date(a.resource.authored));
+  const sortedResponses = responses.sort((a, b) => 
+    sortOrder === 'asc' 
+    ? new Date(a.resource.authored) - new Date(b.resource.authored) 
+    : new Date(b.resource.authored) - new Date(a.resource.authored)
+  );
+
   const paginatedResponses = sortedResponses.slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage);
   const numberOfPages = Math.ceil(responses.length / itemsPerPage);
 
@@ -41,7 +47,7 @@ const PHQ9ResultsTable = ({ responses }) => {
       <Table striped bordered hover>
         <thead>
           <tr>
-            <th>Date</th>
+          <th onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}>Date {sortOrder === 'asc' ? ' ▲' : ' ▼'}</th>
             {questionNames.map((name, index) => (
               <th key={index}>{name}</th>
             ))}
