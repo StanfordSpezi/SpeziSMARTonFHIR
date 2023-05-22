@@ -35,8 +35,8 @@ const Header = () => {
     const providerName = getProviderName();
 
     return (
-        <Navbar className="spezi-bg-color" fixed="top" expand="lg" style={{display: 'flex', justifyContent: 'space-between'}}>
-            <Navbar.Brand href="#home" style={{paddingLeft: '20px'}}>
+        <Navbar className="spezi-bg-color" fixed="top" expand="lg" style={{ display: 'flex', justifyContent: 'space-between' }}>
+            <Navbar.Brand href="#home" style={{ paddingLeft: '20px' }}>
                 <img
                     src={logo}
                     className="d-inline-block align-top"
@@ -44,11 +44,11 @@ const Header = () => {
                     height="50"
                 />
             </Navbar.Brand>
-            <Navbar.Text className="text-white" style={{margin: '0 auto'}}>
+            <Navbar.Text className="text-white" style={{ margin: '0 auto' }}>
                 <h5>Spezi SMART-on-FHIR Dashboard</h5>
             </Navbar.Text>
-            <Navbar.Text className="text-white" style={{paddingRight: '20px'}}>
-                {providerName !== "" ? <Button variant="dark"> {providerName}</Button> : null}
+            <Navbar.Text className="text-white" style={{ paddingRight: '20px' }}>
+                <Button variant="dark"> {providerName !== "" ? providerName  : "Logout"} </Button>
             </Navbar.Text>
         </Navbar>
     )
