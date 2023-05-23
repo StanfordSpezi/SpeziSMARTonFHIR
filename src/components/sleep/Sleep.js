@@ -14,7 +14,7 @@ const Sleep = ({ observations }) => {
 
     return (
         <Card className="p-2 m-2 d-flex flex-column align-items-center justify-content-center shadow">
-            <p className="lead">Steps</p>
+            <p className="lead">Sleep Duration</p>
             <div style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center', marginBottom: '20px' }}>
                 <DatePicker selected={start} onChange={(date) => setStart(date)} />
                 <div style={{ margin: '0 10px' }}>to</div>
