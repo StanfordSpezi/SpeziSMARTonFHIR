@@ -1,0 +1,260 @@
+{
+    "resourceType": "Bundle",
+    "id": "sleep-data-bundle",
+    "type": "collection",
+    "entry": [
+      {
+        "resource": {
+          "resourceType": "Observation",
+          "id": "obs1",
+          "status": "final",
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "55418-8",
+                "display": "Sleep duration"
+              }
+            ]
+          },
+          "effectiveDateTime": "2023-05-12T00:00:00Z",
+          "valueQuantity": {
+            "value": 7,
+            "unit": "hours"
+          }
+        }
+      },
+      {
+        "resource": {
+          "resourceType": "Observation",
+          "id": "obs2",
+          "status": "final",
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "55418-8",
+                "display": "Sleep duration"
+              }
+            ]
+          },
+          "effectiveDateTime": "2023-05-13T00:00:00Z",
+          "valueQuantity": {
+            "value": 6.5,
+            "unit": "hours"
+          }
+        }
+      },
+      {
+        "resource": {
+          "resourceType": "Observation",
+          "id": "obs3",
+          "status": "final",
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "55418-8",
+                "display": "Sleep duration"
+              }
+            ]
+          },
+          "effectiveDateTime": "2023-05-14T00:00:00Z",
+          "valueQuantity": {
+            "value": 8,
+            "unit": "hours"
+          }
+        }
+      },
+      {
+        "resource": {
+          "resourceType": "Observation",
+          "id": "obs4",
+          "status": "final",
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "55418-8",
+                "display": "Sleep duration"
+              }
+            ]
+          },
+          "effectiveDateTime": "2023-05-15T00:00:00Z",
+          "valueQuantity": {
+            "value": 7.5,
+            "unit": "hours"
+          }
+        }
+      },
+      {
+        "resource": {
+          "resourceType": "Observation",
+          "id": "obs5",
+          "status": "final",
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "55418-8",
+                "display": "Sleep duration"
+              }
+            ]
+          },
+          "effectiveDateTime": "2023-05-16T00:00:00Z",
+          "valueQuantity": {
+            "value": 6,
+            "unit": "hours"
+          }
+        }
+      },
+      {
+        "resource": {
+          "resourceType": "Observation",
+          "id": "obs6",
+          "status": "final",
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "55418-8",
+                "display": "Sleep duration"
+              }
+            ]
+          },
+          "effectiveDateTime": "2023-05-17T00:00:00Z",
+          "valueQuantity": {
+            "value": 8,
+            "unit": "hours"
+          }
+        }
+      },
+      {
+        "resource": {
+          "resourceType": "Observation",
+          "id": "obs7",
+          "status": "final",
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "55418-8",
+                "display": "Sleep duration"
+              }
+            ]
+          },
+          "effectiveDateTime": "2023-05-18T00:00:00Z",
+          "valueQuantity": {
+            "value": 7,
+            "unit": "hours"
+          }
+        }
+      },
+      {
+        "resource": {
+          "resourceType": "Observation",
+          "id": "obs8",
+          "status": "final",
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "55418-8",
+                "display": "Sleep duration"
+              }
+            ]
+          },
+          "effectiveDateTime": "2023-05-19T00:00:00Z",
+          "valueQuantity": {
+            "value": 7.5,
+            "unit": "hours"
+          }
+        }
+      },
+      {
+        "resource": {
+          "resourceType": "Observation",
+          "id": "obs9",
+          "status": "final",
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "55418-8",
+                "display": "Sleep duration"
+              }
+            ]
+          },
+          "effectiveDateTime": "2023-05-20T00:00:00Z",
+          "valueQuantity": {
+            "value": 8,
+            "unit": "hours"
+          }
+        }
+      },
+      {
+        "resource": {
+          "resourceType": "Observation",
+          "id": "obs10",
+          "status": "final",
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "55418-8",
+                "display": "Sleep duration"
+              }
+            ]
+          },
+          "effectiveDateTime": "2023-05-21T00:00:00Z",
+          "valueQuantity": {
+            "value": 6,
+            "unit": "hours"
+          }
+        }
+      },
+      {
+        "resource": {
+          "resourceType": "Observation",
+          "id": "obs11",
+          "status": "final",
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "55418-8",
+                "display": "Sleep duration"
+              }
+            ]
+          },
+          "effectiveDateTime": "2023-05-22T00:00:00Z",
+          "valueQuantity": {
+            "value": 7,
+            "unit": "hours"
+          }
+        }
+      },
+      {
+        "resource": {
+          "resourceType": "Observation",
+          "id": "obs12",
+          "status": "final",
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "55418-8",
+                "display": "Sleep duration"
+              }
+            ]
+          },
+          "effectiveDateTime": "2023-05-23T00:00:00Z",
+          "valueQuantity": {
+            "value": 6.5,
+            "unit": "hours"
+          }
+        }
+      }
+    ]
+  }
+  
