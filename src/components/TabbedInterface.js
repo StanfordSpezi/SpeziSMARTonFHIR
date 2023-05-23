@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { Tab, Nav, Container, Row, Col, Card } from 'react-bootstrap';
+import { Tab, Nav, Container, Row, Col } from 'react-bootstrap';
 import Activity from './activity/Activity';
-import PHQ9ResultsTable from './phq9/PHQ9ResultsTable';
-import observations from '../data/observations.json';
-import questionnaireResponses from '../data/questionnaire-responses.json';
+import PHQ9 from './phq9/PHQ9';
+import Sleep from './sleep/Sleep';
+import activity from '../data/activity.json';
+import sleep from '../data/sleep.json';
+import phq9responses from '../data/phq9responses.json'
 import PatientBanner from './PatientBanner';
 
 const TabbedInterface = () => {
@@ -28,18 +30,21 @@ const TabbedInterface = () => {
                 <Nav.Link eventKey="activity">Activity</Nav.Link>
               </Nav.Item>
               <Nav.Item>
+                <Nav.Link eventKey="sleep">Sleep</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
                 <Nav.Link eventKey="phq9">PHQ-9</Nav.Link>
               </Nav.Item>
             </Nav>
             <Tab.Content>
               <Tab.Pane eventKey="activity">
-                <Activity observations={observations} />
+                <Activity observations={activity} />
               </Tab.Pane>
               <Tab.Pane eventKey="phq9">
-              <Card className="p-2 m-2 d-flex flex-column align-items-center justify-content-center shadow">
-                  <p className="lead">PHQ-9 Responses</p>
-                  <PHQ9ResultsTable responses={questionnaireResponses.entry} />
-                </Card>
+                <PHQ9 responses={phq9responses} />
+              </Tab.Pane>
+              <Tab.Pane eventKey="sleep">
+                  <Sleep observations={sleep} />
               </Tab.Pane>
             </Tab.Content>
           </Tab.Container>
