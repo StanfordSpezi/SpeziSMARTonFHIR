@@ -1,23 +1,32 @@
-import React from 'react';
 import 'react-datepicker/dist/react-datepicker.css';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { BundleEntry, Observation } from 'fhir/r4';
 
-const StepCountChart = ({ observations, startDate, endDate }) => {
+interface StepCountChartProps {
+  observations: BundleEntry<Observation>[];
+  startDate: string | Date;
+  endDate: string | Date;
+}
+
+const StepCountChart: React.FC<StepCountChartProps> = ({ observations, startDate, endDate }) => {
   startDate = new Date(startDate);
   endDate = new Date(endDate);
   
-  const data = observations.map(entry => {
-    const date = new Date(entry.resource.effectiveDateTime);
+  const data = observations.map(observation => {
+    if (observation.resource?.effectiveDateTime) {
+    const date = new Date(observation.resource?.effectiveDateTime);
     const formattedDate = `${date.toLocaleString('default', { month: 'long' })} ${date.getDate()}`; // Display month as a word
     
     return {
       date: formattedDate,
-      steps: entry.resource.valueQuantity.value,
+      steps: observation.resource?.valueQuantity?.value,
       originalDate: date // Store the original date for sorting
     };
+  }
+  return null;
   })
-  .filter(item => item.originalDate >= startDate && item.originalDate <= endDate) // Filter by date
-  .sort((a, b) => a.originalDate - b.originalDate); // Sort the data by the original date
+  .filter(item => item?.originalDate && item.originalDate >= startDate && item.originalDate <= endDate) // Filter by date
+  .sort((a, b) => (a?.originalDate.getTime() || 0) - (b?.originalDate.getTime() || 0)); // Sort the data by the original date
 
   return (
     <ResponsiveContainer width={'99%'} height={400}>

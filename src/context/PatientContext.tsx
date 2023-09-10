@@ -8,23 +8,28 @@ SPDX-License-Identifier: MIT
    
 */
 
-import { useState, useEffect, createContext, useContext } from 'react';
+import { useState, useEffect, createContext, useContext, ReactNode } from 'react';
 import { useFHIRClient } from './FHIRClientContext';
 import Loading from "../components/Loading";
+import Client from 'fhirclient/lib/Client'
+import { Patient } from 'fhir/r4';
 
-export const PatientContext = createContext(null);
+interface PatientProviderProps {
+    children: ReactNode;
+}
 
-export const usePatient = () => useContext(PatientContext);
+export const PatientContext = createContext<Patient | null>(null);
 
-export const PatientProvider = ({ children }) => {
+export const usePatient = (): Patient | null => useContext(PatientContext);
 
-    const fhirClient = useFHIRClient();
-    const [patient, setPatient] = useState(null);
+export const PatientProvider: React.FC<PatientProviderProps> = ({ children }) => {
+    const fhirClient: Client | null = useFHIRClient();
+    const [patient, setPatient] = useState<Patient | undefined>(undefined);
 
     useEffect(() => {
         // get the current patient from the FHIR server
         async function getCurrentPatient() {
-            const currentPatient = await fhirClient.patient.read();
+            const currentPatient = await fhirClient?.patient.read();
             setPatient(currentPatient);
         }
         getCurrentPatient();

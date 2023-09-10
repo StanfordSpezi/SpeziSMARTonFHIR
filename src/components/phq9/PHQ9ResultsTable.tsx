@@ -1,8 +1,13 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
+import { BundleEntry, QuestionnaireResponse } from 'fhir/r4'
 
-const PHQ9ResultsTable = ({ responses }) => {
+interface PHQ9ResultsTableProps {
+  responses: BundleEntry<QuestionnaireResponse>[];
+}
+
+const PHQ9ResultsTable: React.FC<PHQ9ResultsTableProps> = ({ responses }) => {
   const itemsPerPage = 5;
   const [currentPage, setCurrentPage] = useState(0);
   const [sortOrder, setSortOrder] = useState('desc');
@@ -19,7 +24,7 @@ const PHQ9ResultsTable = ({ responses }) => {
     "Thoughts of self-harm"
   ];
 
-  const getInterpretation = (score) => {
+  const getInterpretation = (score: number) => {
     if (score <= 4) {
       return "Minimal depression";
     } else if (score <= 9) {
@@ -33,12 +38,15 @@ const PHQ9ResultsTable = ({ responses }) => {
     }
   };  
   
-  const sortedResponses = responses.sort((a, b) => 
-    sortOrder === 'asc' 
-    ? new Date(a.resource.authored) - new Date(b.resource.authored) 
-    : new Date(b.resource.authored) - new Date(a.resource.authored)
-  );
-
+  const sortedResponses = responses.sort((a, b) => {
+    if (a.resource?.authored === undefined || b.resource?.authored === undefined) {
+      return 0;
+    }
+    return sortOrder === 'asc'
+      ? new Date(a.resource.authored).getTime() - new Date(b.resource.authored).getTime()
+      : new Date(b.resource.authored).getTime() - new Date(a.resource.authored).getTime();
+  });
+  
   const paginatedResponses = sortedResponses.slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage);
   const numberOfPages = Math.ceil(responses.length / itemsPerPage);
 
@@ -58,20 +66,20 @@ const PHQ9ResultsTable = ({ responses }) => {
         <tbody>
           {paginatedResponses.map((response) => {
             const scores = questionIds.map((id) => {
-              const item = response.resource.item.find((item) => item.linkId === id);
-              const answer = item ? item.answer[0].valueInteger : 0;
+              const item = response.resource?.item?.find((item) => item.linkId === id);
+              const answer = item ? item.answer?.[0].valueInteger : 0;
               return answer;
             });
-            const totalScore = scores.reduce((a, b) => a + b, 0);
+            const totalScore = scores.reduce((a, b) => (a ?? 0) + (b ?? 0), 0);
 
             return (
-              <tr key={response.resource.id}>
-                <td>{new Date(response.resource.authored).toLocaleDateString()}</td>
+              <tr key={response.resource?.id}>
+                <td>{response.resource?.authored ? new Date(response.resource.authored).toLocaleDateString() : 'N/A'}</td>
                 {scores.map((score, index) => (
                   <td key={index}>{score}</td>
                 ))}
                 <td>{totalScore}</td>
-                <td>{getInterpretation(totalScore)}</td>
+                <td>{totalScore !== undefined ? getInterpretation(totalScore) : 'N/A'}</td>
               </tr>
             );
           })}

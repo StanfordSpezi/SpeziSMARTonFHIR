@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Tab, Nav, Container, Row, Col } from 'react-bootstrap';
 import Activity from './activity/Activity';
 import PHQ9 from './phq9/PHQ9';
@@ -7,12 +7,15 @@ import activity from '../data/activity.json';
 import sleep from '../data/sleep.json';
 import phq9responses from '../data/phq9responses.json'
 import PatientBanner from './PatientBanner';
+import { Bundle, Observation, QuestionnaireResponse } from 'fhir/r4';
 
 const TabbedInterface = () => {
   const [activeTab, setActiveTab] = useState('activity');
 
-  const handleTabSelect = (tab) => {
-    setActiveTab(tab);
+  const handleTabSelect = (tab: string | null) => {
+    if (tab) {
+      setActiveTab(tab);
+    }
   };
 
   return (
@@ -38,13 +41,13 @@ const TabbedInterface = () => {
             </Nav>
             <Tab.Content>
               <Tab.Pane eventKey="activity">
-                <Activity observations={activity} />
+                <Activity observationBundle={activity as Bundle<Observation>} />
               </Tab.Pane>
               <Tab.Pane eventKey="phq9">
-                <PHQ9 responses={phq9responses} />
+                <PHQ9 responsesBundle={phq9responses as Bundle<QuestionnaireResponse>} />
               </Tab.Pane>
               <Tab.Pane eventKey="sleep">
-                  <Sleep observations={sleep} />
+                <Sleep observationBundle={sleep as Bundle<Observation>} />
               </Tab.Pane>
             </Tab.Content>
           </Tab.Container>

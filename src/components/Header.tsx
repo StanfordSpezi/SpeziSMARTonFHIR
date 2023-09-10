@@ -18,7 +18,7 @@ import { Button } from 'react-bootstrap';
 const Header = () => {
     const user = useUser();
     const fhirClient = useFHIRClient();
-    const id_token = fhirClient.getIdToken();
+    const id_token = fhirClient?.getIdToken() ?? ""
 
     const getProviderName = () => {
         // try to get logged in provider's name from user context. 
