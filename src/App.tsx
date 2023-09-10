@@ -8,7 +8,6 @@ SPDX-License-Identifier: MIT
    
 */
 
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Launcher from "./Launcher";
 import Home from "./Home";

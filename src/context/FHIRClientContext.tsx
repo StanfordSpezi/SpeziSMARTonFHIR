@@ -8,21 +8,26 @@ SPDX-License-Identifier: MIT
    
 */
 
-import { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import FHIR from "fhirclient";
 import Loading from '../components/Loading';
+import Client from 'fhirclient/lib/Client';
 
-export const FHIRClientContext = createContext(null);
+interface FHIRClientProviderProps {
+    children: ReactNode;
+}
+
+export const FHIRClientContext = createContext<Client | null>(null);
 
 export const useFHIRClient = () => useContext(FHIRClientContext);
 
-export const FHIRClientProvider = ({ children }) => {
+export const FHIRClientProvider: React.FC<FHIRClientProviderProps> = ({ children }) => {
 
-    const [client, setClient] = useState(null);
+    const [client, setClient] = useState<Client | null>(null);
 
     useEffect(() => {
         FHIR.oauth2.ready()
-            .then((client) => setClient(client))
+            .then((client: Client) => setClient(client))
             .catch(console.error);
     }, []);
 

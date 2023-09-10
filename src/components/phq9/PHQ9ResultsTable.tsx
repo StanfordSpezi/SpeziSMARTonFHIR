@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 
@@ -35,8 +35,8 @@ const PHQ9ResultsTable = ({ responses }) => {
   
   const sortedResponses = responses.sort((a, b) => 
     sortOrder === 'asc' 
-    ? new Date(a.resource.authored) - new Date(b.resource.authored) 
-    : new Date(b.resource.authored) - new Date(a.resource.authored)
+    ? new Date(a.resource.authored).getTime() - new Date(b.resource.authored).getTime()
+    : new Date(b.resource.authored).getTime() - new Date(a.resource.authored).getTime()
   );
 
   const paginatedResponses = sortedResponses.slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage);

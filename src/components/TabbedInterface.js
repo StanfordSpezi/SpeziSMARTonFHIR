@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Tab, Nav, Container, Row, Col } from 'react-bootstrap';
 import Activity from './activity/Activity';
 import PHQ9 from './phq9/PHQ9';
