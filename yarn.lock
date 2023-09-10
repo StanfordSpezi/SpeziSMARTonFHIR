@@ -2063,10 +2063,10 @@
     "@types/qs" "*"
     "@types/serve-static" "*"
 
-"@types/fhir-js-client@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@types/fhir-js-client/-/fhir-js-client-1.0.2.tgz#0ac6979e9aefe0c0b791b6954709f20f3f22cff3"
-  integrity sha512-n9NemUXogiR+jSW6Z27WW/rWeUUKFny0ikTM7T8P5UsaRm42j9NyAqqslWm9WcgWpKQlV+B0BUwvNAdPK9TEHg==
+"@types/fhir@^0.0.37":
+  version "0.0.37"
+  resolved "https://registry.yarnpkg.com/@types/fhir/-/fhir-0.0.37.tgz#54835d905009b34360437ba014564299c530253c"
+  integrity sha512-fR1y6tPfDmxYDWN4JkJhuI5F5QpbaFVSoNo3pu9A6nzuoojANqg0UBnNZTVegTz/MilV3PSjyvFe6/vO55geKA==
 
 "@types/graceful-fs@^4.1.2":
   version "4.1.6"
