@@ -12,8 +12,9 @@
     "rootDir": "src",
     "noImplicitReturns": true,
     "noImplicitThis": true,
-    "noImplicitAny": false,
-    "strictNullChecks": true
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "resolveJsonModule": true,
   },
   "exclude": [
     "node_modules",
