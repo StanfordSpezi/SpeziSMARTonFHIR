@@ -21,7 +21,7 @@ To run this software, you will first need to have [Node.js](https://nodejs.org/e
 1. Install dependencies by running `npm install`.
 2. Set the environment variables in `.env.sample` and rename it to `.env`.
     - `VITE_SMART_CLIENTID` and `VITE_SMART_CLIENTSECRET` are the client credentials registered with your EHR system. (Note: If you are testing with the SMART Launcher, it does not validate these, so they can be left blank.)
-    - `VITE_SMART_SCOPE` is the set of [FHIR scopes](http://www.hl7.org/fhir/smart-app-launch/scopes-and-launch-context/) your app will request access to. 
+    - `VITE_SMART_SCOPE` is the set of [FHIR scopes](https://build.fhir.org/ig/HL7/smart-app-launch/scopes-and-launch-context.html) your app will request access to. 
 
 ## Testing with the SMART Launcher
 
