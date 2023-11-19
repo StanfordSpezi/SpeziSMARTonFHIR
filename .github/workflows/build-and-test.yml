@@ -7,6 +7,9 @@ on:
   pull_request:
 
 jobs:
+  markdownlinkcheck:
+    name: Markdown Link Check
+    uses: StanfordBDHG/.github/.github/workflows/markdown-link-check.yml@v2
   build_test:
     runs-on: ubuntu-latest
 
