@@ -8,28 +8,28 @@ SPDX-License-Identifier: MIT
    
 -->
 
-# Spezi SMART-on-FHIR Dashboard
+# Spezi SMART-on-FHIR Demo
 
-A template for a SMART-on-FHIR dashboard application built in React that can be launched from within an Electronic Health Record system. 
+A demonstration of a SMART-on-FHIR dashboard application built in [React](https://react.dev/) that can be launched from within an Electronic Health Record (EHR) system. 
 
 Check out the <a href="https://www.youtube.com/watch?v=CGj_X79yk-o">demo video</a> for an example.
 
 ## Installation
 
-To run this software, you will first need to have [Node.js](https://nodejs.org/en) installed on your system.
+To run this software, you will first need to have [Node.js](https://nodejs.org/en) version 18+ installed on your system.
 
-1. Install dependencies by running `yarn install`.
+1. Install dependencies by running `npm install`.
 2. Set the environment variables in `.env.sample` and rename it to `.env`.
-    - `REACT_APP_SMART_CLIENTID` and `REACT_APP_SMART_CLIENTSECRET` are the client credentials registered with your EHR system. (Note: If you are testing with the SMART Launcher, it does not validate these, so they can be left blank.)
-    - `REACT_APP_SMART_SCOPE` is the set of [FHIR scopes](http://www.hl7.org/fhir/smart-app-launch/scopes-and-launch-context/) your app will request access to. 
+    - `VITE_SMART_CLIENTID` and `VITE_SMART_CLIENTSECRET` are the client credentials registered with your EHR system. (Note: If you are testing with the SMART Launcher, it does not validate these, so they can be left blank.)
+    - `VITE_SMART_SCOPE` is the set of [FHIR scopes](http://www.hl7.org/fhir/smart-app-launch/scopes-and-launch-context/) your app will request access to. 
 
 ## Testing with the SMART Launcher
 
-1. Start the application locally by running `yarn start`.
+1. Start the application locally by running `npm start`.
 2. Load the [SMART Launcher](https://launch.smarthealthit.org) in your browser.
 3. Select **Provider EHR Launch** and set **FHIR Version** to **R4**.
 4. Select a sample patient and provider.
-5. Enter `http://localhost:3000/launch` in **App Launch URL** and launch the app!
+5. Enter `http://localhost:5173/launch` in **App Launch URL** and launch the app!
 
 ## Contributing
 
